@@ -1,0 +1,441 @@
+html, body {
+    margin: 0;
+    
+    background-color: #001B06;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    height: 100%; /* Ensure the full height */
+    text-decoration: none;
+
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+
+.header-container, .skyline2-container, .skyline1-container {
+    width: 100%;
+    height: 550px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+
+}
+#head{
+    animation: slideInFromLeft 1s ease forwards;
+
+}
+
+.faq-container {
+    margin: 20px;
+    background-color: #FFCA3B;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 3px solid #061A08;
+    
+    background-color: #ffbb00;
+
+}
+
+.faq-item a {
+    display: block; /* Make the link a block element */
+    color: #061A08; /* Inherit color or specify your own */
+    text-decoration: none; /* Remove underline */
+    
+}
+
+.faq-answer {
+    margin-top: 5px;
+    
+    background-color: #ffbb00;
+    display: none; /* Initially hidden */
+    color: #061A08; /* Inherit color or specify your own */
+
+}
+
+       
+.header-container {
+    background-image: url('images_asset/skyline1.png');
+}
+
+.skyline2-container {
+    background-image: url('images_asset/skyline2.png');
+}
+
+.skyline1-container {
+    background-image: url('images_asset/skyline1.png');
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #061A08;
+    z-index: 1000;
+    font-family: 'Goldman';
+}
+
+.navbar.expanded {
+    width: 110px;
+}
+
+.navbar .Button {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.navbar a {
+    color: #ffbb00;
+    text-decoration: none;
+    
+}
+
+.navbar a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .header-container, .skyline2-container, .skyline1-container {
+        /* Adjust padding for header and skyline containers */
+
+
+        /* CHECK: try vh and vw for size and scaling */
+
+        background: none;
+
+            padding: 10px;
+    
+        .content, .faq-container, .faq-item, .faq-answer {
+            /* Add padding to content and FAQ sections */
+            padding: 15px;
+        }
+    
+        .navbar {
+            /* Adjust padding for the navbar */
+            padding: 5px;
+        }
+    
+        .button-link, .styled-input, .styled-input2 {
+            /* Adjust padding for buttons and input fields */
+            padding: 10px 20px;
+        }
+    
+        /* Add padding to other specific elements as needed */
+    }
+    
+
+    /* Add padding to other specific elements as needed */
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+.image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: transform .15s;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: none;
+}
+
+.image-wrapper img.logo {
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.content {
+    font-family: goldman ;
+    flex: 1; /* This will push the footer down */
+
+}
+
+.content h1 {
+    font-size: 58px; /* Adjust size as needed */
+    color: #ffbb00; /* Yellow color for headings */
+    margin: 20px 0; /* Add some space above and below the heading */
+    text-decoration: none;
+
+}
+
+.content section:nth-child(odd) {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+#About {
+    text-align: center;
+    font-size: 30px;
+    animation: slideInFromRight 1s ease forwards;
+
+
+}
+
+.content section:nth-child(even) {
+    text-align: center;
+    font-size: 20px;
+}
+
+#Schedule {
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+/* Center the table within the Schedule section */
+#Schedule .event-table {
+    display: table; /* Ensures that the table is treated as a block-level table */
+}
+
+
+/* Additional styling to ensure the text in each section is readable and well-spaced */
+.content p {
+    margin: 10px 0;
+}
+.event-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid #ffbb00;
+    color: white;
+    font-family: 'Goldman';
+}
+
+.event-table th {
+    background-color: #ffbb00;
+}
+.styled-input {
+    background-color: transparent;
+    border: 2px solid #ffbb00;
+    color: #ffbb00;
+    font-family: 'Goldman';
+    margin: 5px 0;
+    animation: fadeBorder 2s infinite; /* Apply the keyframes animation in an infinite loop */
+
+}
+
+
+@keyframes fadeBorder {
+    0%, 100% {
+        border-color: #ffbb00; /* Start and end with yellow border */
+    }
+    50% {
+        border-color: white; /* Midway, fade to white border */
+    }
+}
+
+.styled-input2 {
+    background-color: transparent;
+    border: 10px solid #ffbb00;
+    font-size: 55px;
+    color: #ffbb00;
+    font-family: 'Goldman';
+    text-decoration: none;
+    
+    margin: 5px 0;
+    animation: fadeBorder 2s infinite; /* Apply the keyframes animation in an infinite loop */
+    animation: fadeBack 5s infinite; /* Apply the keyframes animation in an infinite loop */
+
+}
+.styled-input2:hover {
+    background-color: #ffbb00;
+    border: 10px solid #ffbb00;
+    font-size: 55px;
+    color: #ffbb00;
+    font-family: 'Goldman';
+    
+    margin: 5px 0;
+    animation: fadeText 2s infinite; /* Apply the keyframes animation in an infinite loop */
+
+}
+@keyframes fadeBack{
+    0%, 100% {
+        background-color: #ffbb00; /* Start and end with yellow border */
+    }
+    50% {
+        background-color: transparent; /* Midway, fade to white border */
+    }
+}
+@keyframes fadeText{
+    0%, 100% {
+        color: #ffbb00; /* Start and end with yellow border */
+    }
+    50% {
+        color: white; /* Midway, fade to white border */
+    }
+}
+.fade{
+    animation: fadeText 2s infinite; /* Apply the keyframes animation in an infinite loop */
+}
+.element1 {
+    width: 10%;
+    position: absolute;
+    bottom: 54.1%;
+    right: 84.5%;
+    animation: slideInFromLeft 1s ease forwards, pulse 1.5s ease 1s infinite;
+}
+
+.element2 {
+    width: 10%;
+    position: absolute;
+    bottom: 54.1%;
+    left: 84.5%;
+    animation: slideInFromRight 1s ease forwards, pulse 1.5s ease 1s infinite;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* End at the element's final position */
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.full-width-image{
+                animation: slideInFromt 1s ease forwards;
+
+}
+
+#trackpic {
+    /* Your existing styles */
+    animation: shake 2.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        
+        transform: translateY(-7px);
+
+    }
+    50% {
+        
+        transform: translateY(7px);
+
+    }
+    75% {
+        
+        transform: translateY(-7px);
+
+    }
+}
+footer {
+    width: 100%;
+    background-color: #FFCA3B; 
+    color: rgb(4, 53, 0);
+    text-align: center; 
+    position: relative; /* Adjust as needed */
+    font-family: goldman;
+
+}
+
+footer ul {
+    list-style: none; /* Remove default list styling */
+    
+    margin: 0; /* Remove default margins */
+    font-family: goldman;
+
+}
+
+footer ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 10px; /* Add some space between items */
+    font-family: goldman;
+
+}
+
+footer a {
+    color: rgb(4, 53, 0);
+    ; /* Link color */
+}
+#coming {
+        text-align: center;
+        font-size: 20px;
+        height: 10%;
+        }
+        
+/* Style the tab */
+.tab {
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: transparent;
+    border: 2px solid #FFCA3B;
+    color: #FFCA3B;
+    font-family: 'Goldman';
+    
+    animation: fadeBorder 2s infinite; /* Apply the keyframes animation in an infinite loop */
+    font-size: 22px;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #464646;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    
+}
