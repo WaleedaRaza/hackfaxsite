@@ -9,11 +9,28 @@ html, body {
 
 }
 .page-container {
-    display: flex;
-    flex-direction: column;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    font-family: goldman;
     min-height: 100%;
 }
 
+
+.page-container h1 {
+    font-size: 58px; /* Adjust size as needed */
+    color: #ffbb00; /* Yellow color for headings */
+    margin: 20px 0; /* Add some space above and below the heading */
+    text-decoration: none;
+
+}
+
+/* Additional styling to ensure the text in each section is readable and well-spaced */
+.page-container p {
+    margin: 10px 0;
+}
 
 .header-container, .skyline2-container, .skyline1-container {
     width: 100%;
@@ -23,12 +40,27 @@ html, body {
     background-size: 120%;
 
 }
-#head{
+
+#head {
     animation: slideInFromLeft 1s ease forwards;
 
 }
 
+.tracks {
+}
+
+.sponsors {
+}
+
 .faq-container {
+}
+
+.faq-container h1{
+    text-align: center;
+    color: #ffbb00;
+}
+
+.faqs {
     margin: 20px;
     background-color: #FFCA3B;
 }
@@ -36,7 +68,6 @@ html, body {
 .faq-item {
     margin-bottom: 10px;
     border-bottom: 3px solid #061A08;
-    
     background-color: #ffbb00;
 
 }
@@ -50,13 +81,11 @@ html, body {
 
 .faq-answer {
     margin-top: 5px;
-    
     background-color: #ffbb00;
     display: none; /* Initially hidden */
     color: #061A08; /* Inherit color or specify your own */
 
 }
-
        
 .header-container {
     background-image: url('images_asset/skyline1.png');
@@ -139,13 +168,6 @@ html, body {
     /* Add padding to other specific elements as needed */
 }
 
-.container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-}
-
 .image-wrapper {
     width: 100%;
     max-width: 100%;
@@ -167,55 +189,24 @@ html, body {
     transform-origin: center;
 }
 
-.content {
-    font-family: goldman ;
-    flex: 1; /* This will push the footer down */
-
-}
-
-.content h1 {
-    font-size: 58px; /* Adjust size as needed */
-    color: #ffbb00; /* Yellow color for headings */
-    margin: 20px 0; /* Add some space above and below the heading */
-    text-decoration: none;
-
-}
-
-.content section:nth-child(odd) {
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
-
-}
-#About {
+.about-container {
     text-align: center;
     font-size: 30px;
     animation: slideInFromRight 1s ease forwards;
 
-
 }
 
-.content section:nth-child(even) {
-    text-align: center;
-    font-size: 20px;
-}
-
-#Schedule {
-    margin-right: 10%;
-    margin-left: 10%;
+.schedule {
+    padding-right: 10%;
+    padding-left: 10%;
 
 }
 
 /* Center the table within the Schedule section */
-#Schedule .event-table {
+.schedule .event-table {
     display: table; /* Ensures that the table is treated as a block-level table */
 }
 
-
-/* Additional styling to ensure the text in each section is readable and well-spaced */
-.content p {
-    margin: 10px 0;
-}
 .event-table {
     border-collapse: collapse;
     width: 100%;
@@ -374,6 +365,7 @@ html, body {
 }
 footer {
     width: 100%;
+    margin-top: 12vw;
     background-color: #FFCA3B; 
     color: rgb(4, 53, 0);
     text-align: center; 
@@ -399,13 +391,13 @@ footer ul li {
 
 footer a {
     color: rgb(4, 53, 0);
-    ; /* Link color */
+    /* Link color */
 }
 #coming {
         text-align: center;
         font-size: 20px;
         height: 10%;
-        }
+}
         
 /* Style the tab */
 .tab {
