@@ -15,7 +15,9 @@ html, body {
     text-align: center;
     margin-top: 15px;
     font-family: goldman;
-    min-height: 100%;
+    width: 100%;
+    height: auto;
+    border: solid white 5px;
 }
 
 
@@ -24,7 +26,6 @@ html, body {
     color: #ffbb00; /* Yellow color for headings */
     margin: 20px 0; /* Add some space above and below the heading */
     text-decoration: none;
-
 }
 
 /* Additional styling to ensure the text in each section is readable and well-spaced */
@@ -33,26 +34,32 @@ html, body {
 }
 
 .header-container, .skyline2-container, .skyline1-container {
-    width: 100%;
     height: 550px;
+    width: auto;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 120%;
-
+    border: solid blue 5px;
 }
 
-#head {
-    animation: slideInFromLeft 1s ease forwards;
+.about-container {
+    text-align: center;
+    font-size: 30px;
+    animation: slideInFromRight 1s ease forwards;
+    border: solid pink 5px;
 
 }
 
 .tracks {
+    border: solid red 5px;
 }
 
 .sponsors {
+    border: solid yellow 5px;
 }
 
 .faq-container {
+    border: solid green 5px;
 }
 
 .faq-container h1{
@@ -146,7 +153,7 @@ html, body {
 
             padding: 10px;
     
-        .content, .faq-container, .faq-item, .faq-answer {
+        .page-container, .faq-container, .faq-item, .faq-answer {
             /* Add padding to content and FAQ sections */
             padding: 15px;
         }
@@ -174,13 +181,15 @@ html, body {
     overflow: hidden;
     position: relative;
     transition: transform .15s;
+    border: solid green 5px;
 }
 
 .image-wrapper img {
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
     max-width: none;
+
 }
 
 .image-wrapper img.logo {
@@ -189,16 +198,10 @@ html, body {
     transform-origin: center;
 }
 
-.about-container {
-    text-align: center;
-    font-size: 30px;
-    animation: slideInFromRight 1s ease forwards;
-
-}
-
-.schedule {
+.schedule-container {
     padding-right: 10%;
     padding-left: 10%;
+    border: solid orange 5px;
 
 }
 
@@ -371,6 +374,7 @@ footer {
     text-align: center; 
     position: relative; /* Adjust as needed */
     font-family: goldman;
+    border: solid purple 5px;
 
 }
 
