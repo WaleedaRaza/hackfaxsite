@@ -34,8 +34,7 @@ html, body {
 }
 
 .header-container, .skyline2-container, .skyline1-container {
-    height: 550px;
-    width: auto;
+    height: auto;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 120%;
@@ -180,7 +179,7 @@ html, body {
     max-width: 100%;
     overflow: hidden;
     position: relative;
-    transition: transform .15s;
+    transition: transform .15s; 
     border: solid green 5px;
 }
 
