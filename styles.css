@@ -33,7 +33,7 @@ html, body {
     margin: 10px 0;
 }
 
-.header-container, .skyline2-container, .skyline1-container {
+.header-container {
     height: auto;
     background-position: center center;
     background-repeat: no-repeat;
@@ -92,6 +92,46 @@ html, body {
     color: #061A08; /* Inherit color or specify your own */
 
 }
+
+.team-members-container {
+    margin-top: 50px;
+    border: solid gold 5px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    border: solid black 5px;
+}
+
+.person {
+    border: solid lightgreen 5px;
+    height: auto;
+}
+
+.person-name {
+    text-align: left;
+    font-size: 90%;
+    border: solid white 5px;
+}
+
+.person-title {
+    text-align: left;
+    font-size: 90%;
+    border: solid white 5px;
+
+}
+
+.person-img {
+    max-width: 100%;
+    min-width: 10%;
+    height: auto;
+}
+
        
 .header-container {
     background-image: url('images_asset/skyline1.png');
@@ -118,6 +158,7 @@ html, body {
     background-color: #061A08;
     z-index: 1000;
     font-family: 'Goldman';
+    border: solid blue 10px;
 }
 
 .navbar.expanded {
@@ -142,36 +183,23 @@ html, body {
 }
 
 @media (max-width: 768px) {
-    .header-container, .skyline2-container, .skyline1-container {
-        /* Adjust padding for header and skyline containers */
-
-
-        /* CHECK: try vh and vw for size and scaling */
-
-        background: none;
-
-            padding: 10px;
     
-        .page-container, .faq-container, .faq-item, .faq-answer {
-            /* Add padding to content and FAQ sections */
-            padding: 15px;
-        }
-    
-        .navbar {
-            /* Adjust padding for the navbar */
-            padding: 5px;
-        }
-    
-        .button-link, .styled-input, .styled-input2 {
-            /* Adjust padding for buttons and input fields */
-            padding: 10px 20px;
-        }
-    
-        /* Add padding to other specific elements as needed */
+    .page-container, .faq-container, .faq-item, .faq-answer {
+        /* Add padding to content and FAQ sections */
+        padding: 15px;
+    }
+
+    .navbar {
+        display: grid;
+        align-items: center;
+        border: solid red 10px;
+    }
+
+    .button-link, .styled-input, .styled-input2 {
+        /* Adjust padding for buttons and input fields */
+        padding: 10px 20px;
     }
     
-
-    /* Add padding to other specific elements as needed */
 }
 
 .image-wrapper {
