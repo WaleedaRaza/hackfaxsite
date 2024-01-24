@@ -101,6 +101,7 @@ html, body {
 .team-members {
     display: grid;
     grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-auto-rows: 1fr;
     width: 100%;
     height: auto;
     align-items: center;
@@ -113,23 +114,34 @@ html, body {
     height: auto;
 }
 
+.person h2 {
+    font-size: 120%;
+}
+
 .person-name {
     text-align: left;
     font-size: 90%;
     border: solid white 5px;
 }
 
-.person-title {
+.person-officer {
+    text-align: left;
+    color: #ffbb00;
+    border: solid white 5px;
+
+}
+
+.person-exec {
     text-align: left;
     font-size: 90%;
+    color: rgb(21, 255, 0);
     border: solid white 5px;
 
 }
 
 .person-img {
-    max-width: 100%;
-    min-width: 10%;
-    height: auto;
+    max-height: 12vw;
+    width: auto;
 }
 
        
@@ -187,6 +199,14 @@ html, body {
     .page-container, .faq-container, .faq-item, .faq-answer {
         /* Add padding to content and FAQ sections */
         padding: 15px;
+    }
+
+    .team-members {
+        grid-template-columns: 50% 50%;
+    }
+
+    .person-img {
+        max-height: 25vw;
     }
 
     .navbar {
