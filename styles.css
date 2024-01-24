@@ -37,13 +37,19 @@ html, body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 120%;
+    margin-bottom: 15vw;
 }
 
 .about-container {
     text-align: center;
     font-size: 30px;
+    margin-bottom: 15vw;
     animation: slideInFromRight 1s ease forwards;
 
+}
+
+.tracks-container, .sponsors-container, .faq-container {
+    margin-bottom: 15vw;
 }
 
 .faq-container h1{
@@ -232,6 +238,7 @@ html, body {
 .schedule-container {
     padding-right: 10%;
     padding-left: 10%;
+    margin-bottom: 15vw;
 
 }
 
