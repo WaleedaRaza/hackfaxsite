@@ -52,6 +52,15 @@ html, body {
     margin-bottom: 15vw;
 }
 
+.sponsors-container form input {
+    background-color: #ffbb00;
+    font-size: 1.1em;
+}
+
+.sponsors-container form input:hover {
+    background-color: #c08c00;
+}
+
 .faq-container h1{
     text-align: center;
     color: #ffbb00;
