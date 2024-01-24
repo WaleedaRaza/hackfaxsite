@@ -9,26 +9,64 @@ html, body {
 
 }
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    font-family: goldman;
+    width: 100%;
+    height: auto;
 }
 
 
-.header-container, .skyline2-container, .skyline1-container {
-    width: 100%;
-    height: 550px;
+.page-container h1 {
+    font-size: 58px; /* Adjust size as needed */
+    color: #ffbb00; /* Yellow color for headings */
+    margin: 20px 0; /* Add some space above and below the heading */
+    text-decoration: none;
+}
+
+/* Additional styling to ensure the text in each section is readable and well-spaced */
+.page-container p {
+    margin: 10px 0;
+}
+
+.header-container {
+    height: auto;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 120%;
-
-}
-#head{
-    animation: slideInFromLeft 1s ease forwards;
-
+    margin-bottom: 15vw;
 }
 
-.faq-container {
+.about-container {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15vw;
+    animation: slideInFromRight 1s ease forwards;
+
+}
+
+.tracks-container, .sponsors-container, .faq-container {
+    margin-bottom: 15vw;
+}
+
+.sponsors-container form input {
+    background-color: #ffbb00;
+    font-size: 1.1em;
+}
+
+.sponsors-container form input:hover {
+    background-color: #c08c00;
+}
+
+.faq-container h1{
+    text-align: center;
+    color: #ffbb00;
+}
+
+.faqs {
     margin: 20px;
     background-color: #FFCA3B;
 }
@@ -36,7 +74,6 @@ html, body {
 .faq-item {
     margin-bottom: 10px;
     border-bottom: 3px solid #061A08;
-    
     background-color: #ffbb00;
 
 }
@@ -50,11 +87,55 @@ html, body {
 
 .faq-answer {
     margin-top: 5px;
-    
     background-color: #ffbb00;
     display: none; /* Initially hidden */
     color: #061A08; /* Inherit color or specify your own */
 
+}
+
+.team-members-container {
+    margin-top: 50px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-auto-rows: 1fr;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.person {
+    height: auto;
+}
+
+.person h2 {
+    font-size: 120%;
+}
+
+.person-name {
+    text-align: center;
+    font-size: 90%;
+}
+
+.person-officer {
+    text-align: center;
+    color: #ffbb00;
+
+}
+
+.person-exec {
+    text-align: center;
+    font-size: 90%;
+    color: rgb(21, 255, 0);
+
+}
+
+.person-img {
+    max-height: 12vw;
+    width: auto;
 }
 
        
@@ -107,43 +188,38 @@ html, body {
 }
 
 @media (max-width: 768px) {
-    .header-container, .skyline2-container, .skyline1-container {
-        /* Adjust padding for header and skyline containers */
-
-
-        /* CHECK: try vh and vw for size and scaling */
-
-        background: none;
-
-            padding: 10px;
     
-        .content, .faq-container, .faq-item, .faq-answer {
-            /* Add padding to content and FAQ sections */
-            padding: 15px;
-        }
-    
-        .navbar {
-            /* Adjust padding for the navbar */
-            padding: 5px;
-        }
-    
-        .button-link, .styled-input, .styled-input2 {
-            /* Adjust padding for buttons and input fields */
-            padding: 10px 20px;
-        }
-    
-        /* Add padding to other specific elements as needed */
+    .page-container, .faq-container, .faq-item, .faq-answer {
+        /* Add padding to content and FAQ sections */
+        padding: 15px;
+    }
+
+    .team-members {
+        grid-template-columns: 50% 50%;
+    }
+
+    .person-img {
+        max-height: 25vw;
+    }
+
+    .navbar {
+        display: grid;
+        align-items: center;
+    }
+
+    .button-link, .styled-input, .styled-input2 {
+        /* Adjust padding for buttons and input fields */
+        padding: 10px 20px;
     }
     
-
-    /* Add padding to other specific elements as needed */
 }
 
-.container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
+/* This media query is specifically for the officer section. It is a temporary fix for the amount of pictures
+ * displayed at once depending on the screen size. A more responsive fix should be added later. */
+@media (min-width: 769px) and (max-width: 1380px) {
+    .team-members {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
 }
 
 .image-wrapper {
@@ -151,14 +227,15 @@ html, body {
     max-width: 100%;
     overflow: hidden;
     position: relative;
-    transition: transform .15s;
+    transition: transform .15s; 
 }
 
 .image-wrapper img {
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
     max-width: none;
+
 }
 
 .image-wrapper img.logo {
@@ -167,55 +244,18 @@ html, body {
     transform-origin: center;
 }
 
-.content {
-    font-family: goldman ;
-    flex: 1; /* This will push the footer down */
-
-}
-
-.content h1 {
-    font-size: 58px; /* Adjust size as needed */
-    color: #ffbb00; /* Yellow color for headings */
-    margin: 20px 0; /* Add some space above and below the heading */
-    text-decoration: none;
-
-}
-
-.content section:nth-child(odd) {
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
-
-}
-#About {
-    text-align: center;
-    font-size: 30px;
-    animation: slideInFromRight 1s ease forwards;
-
-
-}
-
-.content section:nth-child(even) {
-    text-align: center;
-    font-size: 20px;
-}
-
-#Schedule {
-    margin-right: 10%;
-    margin-left: 10%;
+.schedule-container {
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-bottom: 15vw;
 
 }
 
 /* Center the table within the Schedule section */
-#Schedule .event-table {
+.schedule .event-table {
     display: table; /* Ensures that the table is treated as a block-level table */
 }
 
-
-/* Additional styling to ensure the text in each section is readable and well-spaced */
-.content p {
-    margin: 10px 0;
-}
 .event-table {
     border-collapse: collapse;
     width: 100%;
@@ -374,6 +414,7 @@ html, body {
 }
 footer {
     width: 100%;
+    margin-top: 12vw;
     background-color: #FFCA3B; 
     color: rgb(4, 53, 0);
     text-align: center; 
@@ -399,13 +440,13 @@ footer ul li {
 
 footer a {
     color: rgb(4, 53, 0);
-    ; /* Link color */
+    /* Link color */
 }
 #coming {
         text-align: center;
         font-size: 20px;
         height: 10%;
-        }
+}
         
 /* Style the tab */
 .tab {
