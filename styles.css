@@ -17,7 +17,6 @@ html, body {
     font-family: goldman;
     width: 100%;
     height: auto;
-    border: solid white 5px;
 }
 
 
@@ -38,27 +37,13 @@ html, body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 120%;
-    border: solid blue 5px;
 }
 
 .about-container {
     text-align: center;
     font-size: 30px;
     animation: slideInFromRight 1s ease forwards;
-    border: solid pink 5px;
 
-}
-
-.tracks {
-    border: solid red 5px;
-}
-
-.sponsors {
-    border: solid yellow 5px;
-}
-
-.faq-container {
-    border: solid green 5px;
 }
 
 .faq-container h1{
@@ -95,7 +80,6 @@ html, body {
 
 .team-members-container {
     margin-top: 50px;
-    border: solid gold 5px;
 }
 
 .team-members {
@@ -106,11 +90,9 @@ html, body {
     height: auto;
     align-items: center;
     justify-content: center;
-    border: solid black 5px;
 }
 
 .person {
-    border: solid lightgreen 5px;
     height: auto;
 }
 
@@ -119,23 +101,20 @@ html, body {
 }
 
 .person-name {
-    text-align: left;
+    text-align: center;
     font-size: 90%;
-    border: solid white 5px;
 }
 
 .person-officer {
-    text-align: left;
+    text-align: center;
     color: #ffbb00;
-    border: solid white 5px;
 
 }
 
 .person-exec {
-    text-align: left;
+    text-align: center;
     font-size: 90%;
     color: rgb(21, 255, 0);
-    border: solid white 5px;
 
 }
 
@@ -170,7 +149,6 @@ html, body {
     background-color: #061A08;
     z-index: 1000;
     font-family: 'Goldman';
-    border: solid blue 10px;
 }
 
 .navbar.expanded {
@@ -212,7 +190,6 @@ html, body {
     .navbar {
         display: grid;
         align-items: center;
-        border: solid red 10px;
     }
 
     .button-link, .styled-input, .styled-input2 {
@@ -236,7 +213,6 @@ html, body {
     overflow: hidden;
     position: relative;
     transition: transform .15s; 
-    border: solid green 5px;
 }
 
 .image-wrapper img {
@@ -256,7 +232,6 @@ html, body {
 .schedule-container {
     padding-right: 10%;
     padding-left: 10%;
-    border: solid orange 5px;
 
 }
 
@@ -429,7 +404,6 @@ footer {
     text-align: center; 
     position: relative; /* Adjust as needed */
     font-family: goldman;
-    border: solid purple 5px;
 
 }
 
