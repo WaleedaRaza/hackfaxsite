@@ -222,6 +222,14 @@ html, body {
     
 }
 
+/* This media query is specifically for the officer section. It is a temporary fix for the amount of pictures
+ * displayed at once depending on the screen size. A more responsive fix should be added later. */
+@media (min-width: 769px) and (max-width: 1380px) {
+    .team-members {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
 .image-wrapper {
     width: 100%;
     max-width: 100%;
